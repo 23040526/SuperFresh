@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/a0223f6d-5270-49a5-87c7-74c3a6aea164/resourceGroups/SuperFreshProject/providers/Microsoft.Web/sites/SuperFreshProject",
+    "appService.deploySubpath": "."
+}
