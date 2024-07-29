@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Search Products</title>
+    <style>
+        .Invcontainer{
+          background: white;
+          border-radius: 1rem;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 2rem;
+          margin-top: 3rem; 
+          max-width: 800px; /*ChatGPT for flex direction and alignment*/
+          margin-left: auto;
+          margin-right: auto;
+          top: 100%;
+          position: relative;
+          transition: all .3s ease-out;
+          height: 100%;
+        }
+
+        .Icon{
+          margin-left: 2rem;
+          margin-right: auto
+        }
+        
+        h2 {
+          margin-top: 0rem;
+          margin-left: 0rem;
+          margin-right: auto;
+          color:green;
+          font-family:'Trebuchet MS';
+          font-weight: bold;
+        }
+
+        body {
+            background-image: url('/images/background.webp'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+        
+         }
+        
+        .navbar-brand {
+            font-family:'Trebuchet MS';
+        }
+
+        .nav-link{
+            font: weight 2px;
+            color:ghostwhite
+        }
+
+        .carousel-caption {
+            color: white;
+            backdrop-filter: blur(2px)brightness(0.8);
+            border-radius: 20px;
+        }
+        
+        nav {
+            background-color:#92745B;
+        }
+        .container {
+            height: 270px;
+            backdrop-filter: blur(2px)brightness(0.9);
+            border-radius: 20px;
+            background-size: cover;
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <%- include ('partials/staffnav.ejs') %> 
+
+    <div class="container mt-3">
+        <br>
+        <h2>Search Products</h2>
+        
+        <!-- Search form -->
+        <form action="/Search_inv" method="post">
+            <div class="mb-3">
+              <label for="searchResult" class="form-label">Enter Product Name / ID</label>
+              <input type="text" class="form-control" id="searchResult" name="searchResult" required>
+            </div>
+            <button type="submit" class="btn btn-success">Search Product</button>
+        </form>
+        
+        
+
+        
+        <a href="/inventory" class="btn btn-secondary mt-3">Back</a>
+    </div>
+</body>
+</html>
