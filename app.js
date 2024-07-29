@@ -19,6 +19,7 @@ app.use(express.static('public/images'));
 const connection = mysql.createConnection({
 host: 'sql.freedb.tech',
 user: 'freedb_superfresh_user',
+port:3306,
 password: 'm%$8QN5FU9hyRhj',
 database: 'freedb_superfresh_db'
 });
