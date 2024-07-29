@@ -17,11 +17,10 @@ app.use(express.static('public/images'));
 
 // Create MySQL connection
 const connection = mysql.createConnection({
-host: 'localhost',
-user: 'root',
-password: '',
-port: 3304,
-database: 'superfresh'
+host: 'db4free.net',
+user: 'superfresh_db',
+password: 'SuperFresh',
+database: 'superfresh_db'
 });
 
 // connect to sql server
